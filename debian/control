@@ -1,0 +1,13 @@
+Source: libgeronimo-stax-1.0-spec-java-maven
+Section: java
+Priority: optional
+Maintainer: Yury Zavarin <yzavarin@ebi.ac.uk>
+Build-Depends:
+ debhelper (>= 9),
+Standards-Version: 3.9.7
+
+Package: libgeronimo-stax-1.0-spec-java-maven
+Architecture: all
+Depends:
+ libgeronimo-stax-1.0-spec-java (= 1.0.1-0ubuntu1),
+Description: Geronimo STAX artifacts available from Debian local Maven repo

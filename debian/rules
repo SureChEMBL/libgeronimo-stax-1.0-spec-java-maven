@@ -1,0 +1,14 @@
+#!/usr/bin/make -f
+
+PACKAGE = libgeronimo-stax-1.0-spec-java-maven
+DEBIAN_GERONIMO_MAVEN_DIR = debian/$(PACKAGE)/usr/share/maven-repo/org/apache/geronimo/specs/geronimo-stax-api_1.0_spec/1.0
+
+override_dh_auto_install:
+	dh_auto_install
+
+
+	mkdir -p $(DEBIAN_GERONIMO_MAVEN_DIR)
+	cp pom.xml $(DEBIAN_GERONIMO_MAVEN_DIR)/geronimo-stax-api_1.0_spec-1.0.pom
+
+%:
+	dh $@
